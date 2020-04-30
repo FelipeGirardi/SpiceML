@@ -9,10 +9,19 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    var selectedImage: UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "goToIdentifySpice") {
+            guard let identifySpiceVC = segue.destination as? IdentifySpiceViewController else { fatalError("Destination controller IdentifySpice not found") }
+            identifySpiceVC.selectedImage = self.selectedImage
+        }
     }
     
     @IBAction func seeCatalogueAction(_ sender: UIButton) {
@@ -70,10 +79,11 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let pickedImage = info[.originalImage] as? UIImage {
-            // imageViewPic.contentMode = .scaleToFill
-        }
-        picker.dismiss(animated: true, completion: nil)
+        guard let pickedImage = info[.originalImage] as? UIImage else { fatalError("Image error") }
+            self.selectedImage = pickedImage
+            picker.dismiss(animated: true, completion: {
+                self.performSegue(withIdentifier: "goToIdentifySpice", sender: nil)
+            })
     }
 }
 

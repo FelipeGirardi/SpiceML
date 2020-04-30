@@ -9,10 +9,15 @@
 import UIKit
 
 class IdentifySpiceViewController: UIViewController {
+    
+    var selectedImage: UIImage?
+    
+    @IBOutlet weak var spiceImage: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        spiceImage.image = selectedImage
     }
 
 

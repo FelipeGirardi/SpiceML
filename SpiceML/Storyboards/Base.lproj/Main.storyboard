@@ -41,10 +41,23 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="y6I-Ux-cg1" kind="show" identifier="goToIdentifySpice" id="pJd-P0-xxi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+        <!--IdentifySpice-->
+        <scene sceneID="rzf-nR-30c">
+            <objects>
+                <viewControllerPlaceholder storyboardName="IdentifySpice" id="y6I-Ux-cg1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Zk7-Hp-1FR"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MmX-K1-JHm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="84"/>
         </scene>
         <!--SpicesList-->
         <scene sceneID="vR2-kA-bhR">

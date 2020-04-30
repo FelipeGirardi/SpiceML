@@ -38,6 +38,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pbK-AL-NAC"/>
                     </view>
+                    <connections>
+                        <outlet property="spiceImage" destination="Zc5-Pi-shC" id="1bV-z7-pI3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ty-x6-UgI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
