@@ -11,10 +11,30 @@ import UIKit
 class MainViewController: UIViewController {
     
     var selectedImage: UIImage?
+    
+    @IBOutlet weak var selectImageButton: UIButton!
+    @IBOutlet weak var seeCatalogueButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        setButtons()
+    }
+    
+    func setButtons() {
+        selectImageButton.titleLabel?.textColor = UIColor(red: 69/255, green: 94/255, blue: 73/255, alpha: 1.0)
+        selectImageButton.backgroundColor = .clear
+        selectImageButton.layer.cornerRadius = 25
+        selectImageButton.layer.borderWidth = 3
+        selectImageButton.layer.borderColor = CGColor(srgbRed: 115/255, green: 143/255, blue: 120/255, alpha: 1.0)
+        selectImageButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        
+        seeCatalogueButton.titleLabel?.textColor = UIColor(red: 69/255, green: 94/255, blue: 73/255, alpha: 1.0)
+        seeCatalogueButton.backgroundColor = .clear
+        seeCatalogueButton.layer.cornerRadius = 25
+        seeCatalogueButton.layer.borderWidth = 3
+        seeCatalogueButton.layer.borderColor = CGColor(srgbRed: 115/255, green: 143/255, blue: 120/255, alpha: 1.0)
+        seeCatalogueButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
