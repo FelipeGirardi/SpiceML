@@ -28,6 +28,7 @@
 		C0369814245A14E900AAE9E0 /* SpicesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpicesListViewController.swift; sourceTree = "<group>"; };
 		C0369817245A158100AAE9E0 /* SpicesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpicesModel.swift; sourceTree = "<group>"; };
 		C0382347245B524100EA3EA7 /* SpicesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpicesListTableViewCell.swift; sourceTree = "<group>"; };
+		C038234A245B6A8100EA3EA7 /* SF-Compact-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Regular.otf"; sourceTree = "<group>"; };
 		C0FC97362459FC4E0023F7B6 /* SpiceML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpiceML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0FC97392459FC4E0023F7B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0FC973B2459FC4E0023F7B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +53,7 @@
 		C013605E245A011800912DA8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C0382349245B6A6900EA3EA7 /* Fonts */,
 				C0FC973F2459FC4E0023F7B6 /* Main.storyboard */,
 				C0136061245A016E00912DA8 /* IdentifySpice.storyboard */,
 				C0369812245A14C400AAE9E0 /* SpicesList.storyboard */,
@@ -76,6 +78,14 @@
 				C0369817245A158100AAE9E0 /* SpicesModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C0382349245B6A6900EA3EA7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C038234A245B6A8100EA3EA7 /* SF-Compact-Display-Regular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		C0FC972D2459FC4E0023F7B6 = {
