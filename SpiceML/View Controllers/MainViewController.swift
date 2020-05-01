@@ -23,18 +23,28 @@ class MainViewController: UIViewController {
     
     func setButtons() {
         selectImageButton.titleLabel?.textColor = UIColor(red: 69/255, green: 94/255, blue: 73/255, alpha: 1.0)
-        selectImageButton.backgroundColor = .clear
+        selectImageButton.backgroundColor = .white
         selectImageButton.layer.cornerRadius = 25
         selectImageButton.layer.borderWidth = 3
         selectImageButton.layer.borderColor = CGColor(srgbRed: 115/255, green: 143/255, blue: 120/255, alpha: 1.0)
         selectImageButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        selectImageButton.layer.shadowColor = UIColor(red: 115/255, green: 143/255, blue: 120/255, alpha: 0.28).cgColor
+        selectImageButton.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
+        selectImageButton.layer.shadowOpacity = 1.0
+        selectImageButton.layer.shadowRadius = 2.0
+        selectImageButton.layer.masksToBounds = false
         
         seeCatalogueButton.titleLabel?.textColor = UIColor(red: 69/255, green: 94/255, blue: 73/255, alpha: 1.0)
-        seeCatalogueButton.backgroundColor = .clear
+        seeCatalogueButton.backgroundColor = .white
         seeCatalogueButton.layer.cornerRadius = 25
         seeCatalogueButton.layer.borderWidth = 3
         seeCatalogueButton.layer.borderColor = CGColor(srgbRed: 115/255, green: 143/255, blue: 120/255, alpha: 1.0)
         seeCatalogueButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        seeCatalogueButton.layer.shadowColor = UIColor(red: 115/255, green: 143/255, blue: 120/255, alpha: 0.28).cgColor
+        seeCatalogueButton.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
+        seeCatalogueButton.layer.shadowOpacity = 1.0
+        seeCatalogueButton.layer.shadowRadius = 2.0
+        seeCatalogueButton.layer.masksToBounds = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
