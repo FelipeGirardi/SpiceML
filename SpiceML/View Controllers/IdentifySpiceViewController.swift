@@ -11,6 +11,8 @@ import UIKit
 class IdentifySpiceViewController: UIViewController {
     
     var selectedImage: UIImage?
+    var classLabel: String?
+    var classProbability: Double?
     
     @IBOutlet weak var spiceImage: UIImageView!
 

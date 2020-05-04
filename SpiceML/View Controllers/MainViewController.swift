@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import CoreML
 
 class MainViewController: UIViewController {
     
+    var spicesModel: Spices_1?
     var selectedImage: UIImage?
+    var classLabel: String?
+    var classProbability: Double?
     
     @IBOutlet weak var selectImageButton: UIButton!
     @IBOutlet weak var seeCatalogueButton: UIButton!
@@ -19,6 +23,10 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         setButtons()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        spicesModel = Spices_1()
     }
     
     func setButtons() {
@@ -50,7 +58,9 @@ class MainViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "goToIdentifySpice") {
             guard let identifySpiceVC = segue.destination as? IdentifySpiceViewController else { fatalError("Destination controller IdentifySpice not found") }
-            identifySpiceVC.selectedImage = self.selectedImage
+            identifySpiceVC.selectedImage = selectedImage
+            identifySpiceVC.classLabel = classLabel
+            identifySpiceVC.classProbability = classProbability
         }
     }
     
@@ -110,10 +120,48 @@ class MainViewController: UIViewController {
 extension MainViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let pickedImage = info[.originalImage] as? UIImage else { fatalError("Image error") }
-            self.selectedImage = pickedImage
-            picker.dismiss(animated: true, completion: {
-                self.performSegue(withIdentifier: "goToIdentifySpice", sender: nil)
-            })
+        
+        // Transform pickedImage to 299x299 size
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 299, height: 299), true, 2.0)
+        pickedImage.draw(in: CGRect(x: 0, y: 0, width: 299, height: 299))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue, kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue] as CFDictionary
+        var pixelBuffer : CVPixelBuffer?
+        let status = CVPixelBufferCreate(kCFAllocatorDefault, Int(newImage.size.width), Int(newImage.size.height), kCVPixelFormatType_32ARGB, attrs, &pixelBuffer)
+        guard (status == kCVReturnSuccess) else {
+            return
+        }
+        
+        CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
+        let pixelData = CVPixelBufferGetBaseAddress(pixelBuffer!)
+        
+        let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
+        let context = CGContext(data: pixelData, width: Int(newImage.size.width), height: Int(newImage.size.height), bitsPerComponent: 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: rgbColorSpace, bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue) //3
+        
+        context?.translateBy(x: 0, y: newImage.size.height)
+        context?.scaleBy(x: 1.0, y: -1.0)
+        
+        UIGraphicsPushContext(context!)
+        newImage.draw(in: CGRect(x: 0, y: 0, width: newImage.size.width, height: newImage.size.height))
+        UIGraphicsPopContext()
+        CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
+        
+        selectedImage = newImage
+        
+        // Use model to make prediction
+        guard let prediction = try? spicesModel?.prediction(image: pixelBuffer!) else {
+            return
+        }
+        
+        classLabel = prediction.classLabel
+        classProbability = prediction.classLabelProbs[classLabel ?? ""]
+        
+        picker.dismiss(animated: true, completion: {
+            self.performSegue(withIdentifier: "goToIdentifySpice", sender: nil)
+        })
+        
     }
 }
 
