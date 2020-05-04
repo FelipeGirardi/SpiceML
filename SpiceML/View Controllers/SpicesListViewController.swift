@@ -30,9 +30,18 @@ extension SpicesListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "spicesListCell") as? SpicesListTableViewCell else { fatalError("Error loading TableViewCell") }
         
-        cell.spiceListImage.image = UIImage(systemName: "suit.club.fill")
-        cell.spiceListImage.tintColor = UIColor.green
-        cell.spiceLabel.text = "Tempero"
+        cell.mainBackground.layer.cornerRadius = 16
+        cell.mainBackground.layer.masksToBounds = true
+
+        cell.shadowLayer.layer.masksToBounds = false
+        cell.shadowLayer.layer.cornerRadius = 16
+        cell.shadowLayer.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cell.shadowLayer.layer.shadowColor = UIColor.black.cgColor
+        cell.shadowLayer.layer.shadowOpacity = 0.23
+        cell.shadowLayer.layer.shadowRadius = 4
+        
+        cell.spiceListImage.image = UIImage(systemName: "manjericao")
+        cell.spiceLabel.text = "Manjericão"
 
         return cell
     }

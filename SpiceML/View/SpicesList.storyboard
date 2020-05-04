@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nJ2-cX-FgQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,21 +27,61 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="122"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="suit.club.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pkJ-Hu-Bce">
-                                                    <rect key="frame" x="20" y="18" width="87" height="87"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="tintColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tempero" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQF-lK-DTX">
-                                                    <rect key="frame" x="155" y="51" width="76" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWN-TJ-xnh">
+                                                    <rect key="frame" x="7" y="11" width="360" height="100"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" adjustable="YES"/>
+                                                    </accessibility>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sta-QJ-wcv">
+                                                    <rect key="frame" x="7" y="11" width="360" height="100"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempero" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQF-lK-DTX">
+                                                            <rect key="frame" x="127" y="30" width="64" height="40"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron" translatesAutoresizingMaskIntoConstraints="NO" id="YqL-N4-Qiy">
+                                                            <rect key="frame" x="340" y="30" width="20" height="40"/>
+                                                        </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="manjericao" translatesAutoresizingMaskIntoConstraints="NO" id="pkJ-Hu-Bce">
+                                                            <rect key="frame" x="2" y="2" width="80" height="96"/>
+                                                            <color key="tintColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" adjustable="YES"/>
+                                                    </accessibility>
+                                                    <constraints>
+                                                        <constraint firstItem="BQF-lK-DTX" firstAttribute="top" secondItem="Sta-QJ-wcv" secondAttribute="top" constant="30" id="8G5-HH-X9x"/>
+                                                        <constraint firstItem="YqL-N4-Qiy" firstAttribute="top" secondItem="Sta-QJ-wcv" secondAttribute="top" constant="30" id="FRW-9U-j0P"/>
+                                                        <constraint firstItem="pkJ-Hu-Bce" firstAttribute="leading" secondItem="Sta-QJ-wcv" secondAttribute="leading" constant="2" id="IeT-KK-9YD"/>
+                                                        <constraint firstAttribute="bottom" secondItem="pkJ-Hu-Bce" secondAttribute="bottom" constant="2" id="Kin-we-JIg"/>
+                                                        <constraint firstItem="pkJ-Hu-Bce" firstAttribute="top" secondItem="Sta-QJ-wcv" secondAttribute="top" constant="2" id="YMf-tG-nWv"/>
+                                                        <constraint firstAttribute="trailing" secondItem="YqL-N4-Qiy" secondAttribute="trailing" id="fkq-WY-wzw"/>
+                                                        <constraint firstAttribute="bottom" secondItem="BQF-lK-DTX" secondAttribute="bottom" constant="30" id="gRZ-qS-qDY"/>
+                                                        <constraint firstAttribute="bottom" secondItem="YqL-N4-Qiy" secondAttribute="bottom" constant="30" id="xRI-mN-3Re"/>
+                                                        <constraint firstItem="BQF-lK-DTX" firstAttribute="leading" secondItem="pkJ-Hu-Bce" secondAttribute="trailing" constant="45" id="yh1-G0-Ppb"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CWN-TJ-xnh" firstAttribute="top" secondItem="1Qh-nY-kqH" secondAttribute="top" constant="11" id="EI9-P3-OLy"/>
+                                                <constraint firstAttribute="trailing" secondItem="Sta-QJ-wcv" secondAttribute="trailing" constant="7" id="G0N-UF-cH9"/>
+                                                <constraint firstItem="CWN-TJ-xnh" firstAttribute="leading" secondItem="1Qh-nY-kqH" secondAttribute="leading" constant="7" id="ORT-Eh-Hvj"/>
+                                                <constraint firstItem="Sta-QJ-wcv" firstAttribute="top" secondItem="1Qh-nY-kqH" secondAttribute="top" constant="11" id="Qxl-Gd-GSl"/>
+                                                <constraint firstItem="Sta-QJ-wcv" firstAttribute="leading" secondItem="1Qh-nY-kqH" secondAttribute="leading" constant="7" id="TWi-Mj-Foh"/>
+                                                <constraint firstAttribute="bottom" secondItem="CWN-TJ-xnh" secondAttribute="bottom" constant="11" id="h2k-8O-kkr"/>
+                                                <constraint firstAttribute="bottom" secondItem="Sta-QJ-wcv" secondAttribute="bottom" constant="11" id="igw-w2-Jme"/>
+                                                <constraint firstAttribute="trailing" secondItem="CWN-TJ-xnh" secondAttribute="trailing" constant="7" id="zKi-fW-q1P"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="mainBackground" destination="Sta-QJ-wcv" id="xA7-La-1fN"/>
+                                            <outlet property="shadowLayer" destination="CWN-TJ-xnh" id="AV3-iy-Pet"/>
                                             <outlet property="spiceLabel" destination="BQF-lK-DTX" id="c0P-df-rJC"/>
                                             <outlet property="spiceListImage" destination="pkJ-Hu-Bce" id="ack-UL-vf9"/>
                                         </connections>
@@ -62,6 +102,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="suit.club.fill" catalog="system" width="128" height="121"/>
+        <image name="chevron" width="20" height="20"/>
+        <image name="manjericao" width="80" height="83"/>
     </resources>
 </document>
