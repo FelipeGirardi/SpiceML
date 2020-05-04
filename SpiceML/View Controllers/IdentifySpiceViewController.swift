@@ -22,5 +22,11 @@ class IdentifySpiceViewController: UIViewController {
         spiceImage.image = selectedImage
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+    }
 
 }

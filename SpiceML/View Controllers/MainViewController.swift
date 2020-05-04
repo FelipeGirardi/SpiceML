@@ -27,6 +27,12 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         spicesModel = Spices_1()
+        
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     func setButtons() {
@@ -65,7 +71,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func seeCatalogueAction(_ sender: UIButton) {
-        performSegue(withIdentifier: "goToSpicesList", sender: sender)
+        performSegue(withIdentifier: "goToSpicesList", sender: nil)
     }
     
     @IBAction func selectImageAction(_ sender: UIButton) {
@@ -148,7 +154,7 @@ extension MainViewController: UIImagePickerControllerDelegate, UINavigationContr
         UIGraphicsPopContext()
         CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
         
-        selectedImage = newImage
+        selectedImage = pickedImage
         
         // Use model to make prediction
         guard let prediction = try? spicesModel?.prediction(image: pixelBuffer!) else {
@@ -156,7 +162,7 @@ extension MainViewController: UIImagePickerControllerDelegate, UINavigationContr
         }
         
         classLabel = prediction.classLabel
-        classProbability = prediction.classLabelProbs[classLabel ?? ""]
+        classProbability = (prediction.classLabelProbs[classLabel ?? ""] ?? 0.0) * 100
         
         picker.dismiss(animated: true, completion: {
             self.performSegue(withIdentifier: "goToIdentifySpice", sender: nil)
