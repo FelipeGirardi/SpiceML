@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>SF-Compact-Display-Semibold.otf</string>
 		<string>SF-Compact-Display-Regular.otf</string>
 	</array>
 	<key>LSApplicationCategoryType</key>
