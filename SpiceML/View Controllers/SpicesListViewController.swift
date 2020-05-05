@@ -16,7 +16,12 @@ class SpicesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.largeTitleDisplayMode = .always
+        self.navigationController?.navigationBar.sizeToFit()
+        
         self.spicesListTableView.separatorStyle = .none
+        
         spicesListTableView.delegate = self
         spicesListTableView.dataSource = self
     }
@@ -53,17 +58,17 @@ extension SpicesListViewController: UITableViewDelegate, UITableViewDataSource {
         return 105
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 80))
-        headerView.backgroundColor = .white
-
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 80))
+//        headerView.backgroundColor = .white
+//
 //        let label = UILabel(frame: CGRect(x: view.frame.size.width/4, y: 7, width: view.frame.size.width, height: 40))
 //        label.text = "Temperos"
 //        label.textColor = .black
 //        label.font = label.font.withSize(40)
 //        headerView.addSubview(label)
-
-        return headerView
-    }
+//
+//        return headerView
+//    }
 
 }
