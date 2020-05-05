@@ -12,6 +12,8 @@ class SpicesListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var spiceListImage: UIImageView!
     @IBOutlet weak var spiceLabel: UILabel!
+    @IBOutlet weak var mainBackground: UIView!
+    @IBOutlet weak var shadowLayer: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
