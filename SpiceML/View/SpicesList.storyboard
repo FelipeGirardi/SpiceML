@@ -20,51 +20,51 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="spicesListCell" rowHeight="122" id="Djm-zT-M1P" customClass="SpicesListTableViewCell" customModule="SpiceML" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="122"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="spicesListCell" rowHeight="112" id="Djm-zT-M1P" customClass="SpicesListTableViewCell" customModule="SpiceML" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Djm-zT-M1P" id="1Qh-nY-kqH">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="122"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWN-TJ-xnh">
-                                                    <rect key="frame" x="7" y="11" width="360" height="100"/>
+                                                    <rect key="frame" x="7" y="11" width="360" height="90"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <accessibilityTraits key="traits" adjustable="YES"/>
                                                     </accessibility>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sta-QJ-wcv">
-                                                    <rect key="frame" x="7" y="11" width="360" height="100"/>
+                                                    <rect key="frame" x="7" y="11" width="360" height="90"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempero" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQF-lK-DTX">
-                                                            <rect key="frame" x="127" y="30" width="64" height="40"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron" translatesAutoresizingMaskIntoConstraints="NO" id="YqL-N4-Qiy">
-                                                            <rect key="frame" x="340" y="30" width="20" height="40"/>
-                                                        </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="manjericao" translatesAutoresizingMaskIntoConstraints="NO" id="pkJ-Hu-Bce">
-                                                            <rect key="frame" x="2" y="2" width="80" height="96"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
                                                             <color key="tintColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                         </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron" translatesAutoresizingMaskIntoConstraints="NO" id="YqL-N4-Qiy">
+                                                            <rect key="frame" x="337" y="30" width="20" height="30"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempero" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQF-lK-DTX">
+                                                            <rect key="frame" x="120" y="30" width="64" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <color key="textColor" red="0.27058823529411763" green="0.36862745098039218" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <accessibilityTraits key="traits" adjustable="YES"/>
                                                     </accessibility>
                                                     <constraints>
-                                                        <constraint firstItem="BQF-lK-DTX" firstAttribute="top" secondItem="Sta-QJ-wcv" secondAttribute="top" constant="30" id="8G5-HH-X9x"/>
-                                                        <constraint firstItem="YqL-N4-Qiy" firstAttribute="top" secondItem="Sta-QJ-wcv" secondAttribute="top" constant="30" id="FRW-9U-j0P"/>
-                                                        <constraint firstItem="pkJ-Hu-Bce" firstAttribute="leading" secondItem="Sta-QJ-wcv" secondAttribute="leading" constant="2" id="IeT-KK-9YD"/>
-                                                        <constraint firstAttribute="bottom" secondItem="pkJ-Hu-Bce" secondAttribute="bottom" constant="2" id="Kin-we-JIg"/>
-                                                        <constraint firstItem="pkJ-Hu-Bce" firstAttribute="top" secondItem="Sta-QJ-wcv" secondAttribute="top" constant="2" id="YMf-tG-nWv"/>
-                                                        <constraint firstAttribute="trailing" secondItem="YqL-N4-Qiy" secondAttribute="trailing" id="fkq-WY-wzw"/>
-                                                        <constraint firstAttribute="bottom" secondItem="BQF-lK-DTX" secondAttribute="bottom" constant="30" id="gRZ-qS-qDY"/>
-                                                        <constraint firstAttribute="bottom" secondItem="YqL-N4-Qiy" secondAttribute="bottom" constant="30" id="xRI-mN-3Re"/>
-                                                        <constraint firstItem="BQF-lK-DTX" firstAttribute="leading" secondItem="pkJ-Hu-Bce" secondAttribute="trailing" constant="45" id="yh1-G0-Ppb"/>
+                                                        <constraint firstAttribute="bottom" secondItem="BQF-lK-DTX" secondAttribute="bottom" constant="30" id="ClP-Uh-Dhr"/>
+                                                        <constraint firstAttribute="bottom" secondItem="YqL-N4-Qiy" secondAttribute="bottom" constant="30" id="JWT-b0-x7g"/>
+                                                        <constraint firstItem="pkJ-Hu-Bce" firstAttribute="leading" secondItem="Sta-QJ-wcv" secondAttribute="leading" id="Ogv-ZA-Uvv"/>
+                                                        <constraint firstAttribute="trailing" secondItem="YqL-N4-Qiy" secondAttribute="trailing" constant="3" id="XCT-vl-dCZ"/>
+                                                        <constraint firstItem="BQF-lK-DTX" firstAttribute="leading" secondItem="pkJ-Hu-Bce" secondAttribute="trailing" constant="40" id="YFb-f9-wgN"/>
+                                                        <constraint firstItem="BQF-lK-DTX" firstAttribute="top" secondItem="Sta-QJ-wcv" secondAttribute="top" constant="30" id="dae-Cy-PQn"/>
+                                                        <constraint firstItem="YqL-N4-Qiy" firstAttribute="top" secondItem="Sta-QJ-wcv" secondAttribute="top" constant="30" id="mIQ-2G-RmZ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="pkJ-Hu-Bce" secondAttribute="bottom" id="qf7-2s-4iE"/>
+                                                        <constraint firstItem="pkJ-Hu-Bce" firstAttribute="top" secondItem="Sta-QJ-wcv" secondAttribute="top" id="yaW-xr-wXa"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
