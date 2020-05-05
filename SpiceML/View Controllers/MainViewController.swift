@@ -21,13 +21,13 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setButtons()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         spicesModel = Spices_1()
-        
+        navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.sizeToFit()
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     

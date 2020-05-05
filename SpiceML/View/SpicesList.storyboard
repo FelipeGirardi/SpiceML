@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Spices List View Controller-->
+        <!--Temperos-->
         <scene sceneID="lKC-lA-0o3">
             <objects>
                 <viewController id="nJ2-cX-FgQ" customClass="SpicesListViewController" customModule="SpiceML" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,6 +92,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="mBY-8D-uor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Temperos" largeTitleDisplayMode="always" id="e1u-lI-cl2"/>
                     <connections>
                         <outlet property="spicesListTableView" destination="X8i-mC-4Pd" id="JIM-52-BIU"/>
                     </connections>
