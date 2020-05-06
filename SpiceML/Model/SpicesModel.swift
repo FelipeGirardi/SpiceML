@@ -27,17 +27,18 @@ let alecrim = Spice(name: "Alecrim",
                     cultivation: "Tolera climas mais secos, podendo passar até três dias sem ser regado. Pode ser plantado em pequenos espaços, como jardineiras ou vasos de tamanho médio e grande, podendo ser cultivado dentro de casa e deixando-o à mão para acrescentá-lo no preparo de uma refeição ou de um chá.",
                     image: UIImage(named: "alecrim")!)
 
-let Salsa = Spice(name: "Salsa",
+let salsa = Spice(name: "Salsa",
                   description: "Também conhecida como 'Tempero ou Cheiro Verde', é um dos temperos mais comuns da culinária brasileira, pois é uma das ervas mais versáteis. Seu sabor é delicado, possuindo toques sutis de anis e combina com quase tudo: quiches, ensopados, tortas salgadas e sopas.",
                   usage: "Seu sabor é mais acentuado quando fresca e/ou recém-colhida, pois quando seca, ela perde parte do aroma. é recomendando adicionar apenas no fim do cozimento. Pode ser utilizada em saladas, molhos para todos os tipos de carnes, massas, sopas, peixes e legumes.",
                   cultivation: "Pode ser cultivada em jardins e vasos com terra fresca e adubada. Colher as folhas com frequência ajuda a manter a planta viva.",
                   image: UIImage(named: "salsa")!)
 
+// Mudar imagem
 let funcho = Spice(name: "Funcho",
                    description: "É comum em pequenas quantidades na cozinha mediterrânica cpor conta do seu aroma, pode ser consumidos fresco como parte de saladas. Seus talos e folhas são consumidos crus ou cozidos como ingredientes de diferentes pratos. Diferente da erva-doce (planta muito similar ao funcho), possui flores amarelas e folhas rendadas.",
                    usage: "Apesar de não ser muito tradiconal na culinária brasileira, além dos chás, o funcho pode ser consumido cru ou cozido, servindo como tempero para carne ou peixe ou saladas. Suas semestes também comumente  utilizadas para agregar sabor em bolos e pães",
                    cultivation: "Pode ser plantada em pequenos espaços ou em hortas, em qualquer região de norte a sul do país, pois se adapta aos diferentes climas do Brasil. Somente na primeira vez é preciso comprar as sementes, que, abundantes, não faltam para os cultivos subsequentes.",
-                   image: UIImage(named: "funcho")!)
+                   image: UIImage(named: "curry")!)
 
 let louro = Spice(name: "Louro",
                   description: "O loureiro é uma árvore, geralmente conhecido pela sua folha de odor específico e que é utilizado na culinária como tempero e em chás.",

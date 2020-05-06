@@ -11,8 +11,9 @@ import UIKit
 class IdentifySpiceViewController: UIViewController {
     
     var selectedImage: UIImage?
-    var classLabel: String?
-    var classProbability: Double?
+//    var classLabel: String?
+//    var classProbability: Double?
+    var identifiedSpice: Spice?
     
     @IBOutlet weak var spiceImage: UIImageView!
     @IBOutlet weak var spiceNameLabel: UILabel!
@@ -27,7 +28,10 @@ class IdentifySpiceViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         spiceImage.image = selectedImage
-        spiceNameLabel.text = classLabel?.uppercased()
+        spiceNameLabel.text = identifiedSpice?.name.uppercased()
+        
+        descriptionTextView.text = identifiedSpice?.description
+        howToConsumeTextView.text = identifiedSpice?.usage
         
         titleBackgroundView.roundCorners(corners: [.topLeft, .topRight], radius: 20)
         
