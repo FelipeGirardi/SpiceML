@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC4761AB24631FC6004EBF30 /* Spices2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AC4761AA24631FC6004EBF30 /* Spices2.mlmodel */; };
 		ACF1FDCF246086CB0005DA82 /* Spices 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = ACF1FDCE246086CB0005DA82 /* Spices 1.mlmodel */; };
 		C0136062245A016E00912DA8 /* IdentifySpice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0136061245A016E00912DA8 /* IdentifySpice.storyboard */; };
 		C0136065245A0E2500912DA8 /* IdentifySpiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0136064245A0E2500912DA8 /* IdentifySpiceViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC4761AA24631FC6004EBF30 /* Spices2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Spices2.mlmodel; sourceTree = "<group>"; };
 		ACF1FDCE246086CB0005DA82 /* Spices 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "Spices 1.mlmodel"; sourceTree = "<group>"; };
 		C0136061245A016E00912DA8 /* IdentifySpice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IdentifySpice.storyboard; sourceTree = "<group>"; };
 		C0136064245A0E2500912DA8 /* IdentifySpiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifySpiceViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				C0369817245A158100AAE9E0 /* SpicesModel.swift */,
 				ACF1FDCE246086CB0005DA82 /* Spices 1.mlmodel */,
+				AC4761AA24631FC6004EBF30 /* Spices2.mlmodel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				C0369815245A14E900AAE9E0 /* SpicesListViewController.swift in Sources */,
 				C0FC973E2459FC4E0023F7B6 /* MainViewController.swift in Sources */,
 				C0369818245A158100AAE9E0 /* SpicesModel.swift in Sources */,
+				AC4761AB24631FC6004EBF30 /* Spices2.mlmodel in Sources */,
 				C0136065245A0E2500912DA8 /* IdentifySpiceViewController.swift in Sources */,
 				C0382348245B524100EA3EA7 /* SpicesListTableViewCell.swift in Sources */,
 				C0FC973A2459FC4E0023F7B6 /* AppDelegate.swift in Sources */,
