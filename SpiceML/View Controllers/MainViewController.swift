@@ -13,8 +13,6 @@ class MainViewController: UIViewController {
     
     var spicesModel: Spices2?
     var selectedImage: UIImage?
-//    var classLabel: String?
-//    var classProbability: Double?
     var identifiedSpice: Spice?
     
     @IBOutlet weak var selectImageButton: UIButton!
@@ -66,8 +64,6 @@ class MainViewController: UIViewController {
         if(segue.identifier == "goToIdentifySpice") {
             guard let identifySpiceVC = segue.destination as? IdentifySpiceViewController else { fatalError("Destination controller IdentifySpice not found") }
             identifySpiceVC.selectedImage = selectedImage
-//            identifySpiceVC.classLabel = classLabel
-//            identifySpiceVC.classProbability = classProbability
             identifySpiceVC.identifiedSpice = identifiedSpice
         }
     }
@@ -163,9 +159,6 @@ extension MainViewController: UIImagePickerControllerDelegate, UINavigationContr
             return
         }
         
-//        classLabel = prediction.classLabel
-//        classProbability = (prediction.classLabelProbs[classLabel ?? ""] ?? 0.0) * 100
-        
         switch(prediction.classLabel) {
         case "Basil":
             identifiedSpice = manjericao
@@ -174,7 +167,7 @@ extension MainViewController: UIImagePickerControllerDelegate, UINavigationContr
         case "Laurel":
             identifiedSpice = louro
         case "Parsley":
-            identifiedSpice = Salsa
+            identifiedSpice = salsa
         case "Rosemary":
             identifiedSpice = alecrim
         default:
