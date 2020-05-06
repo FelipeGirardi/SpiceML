@@ -11,7 +11,7 @@ import CoreML
 
 class MainViewController: UIViewController {
     
-    var spicesModel: Spices_1?
+    var spicesModel: Spices2?
     var selectedImage: UIImage?
     var classLabel: String?
     var classProbability: Double?
@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        spicesModel = Spices_1()
+        spicesModel = Spices2()
         navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.sizeToFit()
         navigationController?.setNavigationBarHidden(true, animated: animated)
